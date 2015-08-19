@@ -1,15 +1,12 @@
 # dreadpi
 Demand Response Enabling Device (DRED) for Raspberry Pi.
 
-
-#### INTRO
-
 Dreadpi enables automatic control of air conditioning DRM modes based on your current renewable power generation.
 It achieves this by controlling a relay board connected to the RasPi GPIO pins.
 This can reduce your grid energy consumption by better aligning your peak load with your peak generation.
 
 Supported collectors:
-* api.enphaseenergy.com
+* api.enphaseenergy.com (Enlighten API)
 * pvoutput.org
 * standalone script
 
@@ -25,7 +22,10 @@ Supported collectors:
 
 #### CONFIG
 
-At minimum, a data source must be confgured in dreadpi.cfg
+At minimum, a data source must be confgured. 
+```
+dreadpi.cfg
+```
 
 
 #### SCHEDULE
