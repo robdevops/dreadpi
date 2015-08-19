@@ -108,7 +108,7 @@ elif DATA_SOURCE == "<your collector>":
     watts = <your collector>.<your function>()
 ```
 To be accepted upstream, also:
-* Pass your variables from dreadpi.cfg:
+* Pass your user configuration from dreadpi.cfg:
 ```
 elif DATA_SOURCE == "<your collector>":
     watts = <your collector>.<your function>(USER, KEY, SYSID)
