@@ -11,7 +11,7 @@ Supported collectors:
 * standalone script
 
 
-#### SYSTEM REQUIREMENTS
+#### REQUIREMENTS
 
 * RasPi hardware (dreadpi will throw errors if it can't access the broadcom chip)
 * 2x Double Throw Relay module ($3 online) and leads ($1 online).
@@ -40,7 +40,7 @@ Critical errors:
 ````
 /var/log/dreadpi.errorlog.txt
 ````
-DRM states (expressed as a % of max energy use: DRM0/2/3=100/50/75% for graphing)
+DRM states (for graphing purposes, states are expressed as a % of max energy use):
 ````
 /var/log/dreadpi.plotlog.txt 
 ````
