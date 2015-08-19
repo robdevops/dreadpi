@@ -1,4 +1,4 @@
-# dreadpi
+d# dreadpi
 Demand Response Enabling Device (DRED) for Raspberry Pi.
 
 Dreadpi enables automatic control of air conditioning DRM modes based on your current renewable power generation.
@@ -15,7 +15,7 @@ Supported collectors:
 
 #### REQUIREMENTS
 
-* RasPi hardware (dreadpi will throw errors if it can't access the broadcom chip)
+* RasPi hardware (You'll be error-bombed if dreadpi can't access the broadcom chip)
 * 2x Double Throw Relay module ($3 online) and leads ($1 online).
 * Root access (for controlling the broadcom chip)
 * Python 3.x
