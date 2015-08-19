@@ -1,14 +1,14 @@
 # dreadpi
 Demand Response Enabling Device (DRED) for Raspberry Pi.
 
-1. INTRO
-2. SYSTEM REQUIREMENTS
-3. CONFIG
-4. SCHEDULE
-5. LOGGING
-6. SECURITY
-7. WIRING
-8. CONTRIBUTE
+#### 1. INTRO
+#### 2. SYSTEM REQUIREMENTS
+#### 3. CONFIG
+#### 4. SCHEDULE
+#### 5. LOGGING
+#### 6. SECURITY
+#### 7. WIRING
+#### 8. CONTRIBUTE
 
 
 1. INTRO
@@ -25,21 +25,21 @@ standalone script
 
 2. SYSTEM REQUIREMENTS
 
-# RasPi hardware (dreadpi will throw errors if it can't access the broadcom chip)
-# 2x Double Throw Relay module ($3 online) and leads ($1 online).
-# Root access (for controlling the broadcom chip)
-# Python 3.x
-# RPi.GPIO Python Module (raspbian package "python3-rpi.gpio")
+* RasPi hardware (dreadpi will throw errors if it can't access the broadcom chip)
+* 2x Double Throw Relay module ($3 online) and leads ($1 online).
+* Root access (for controlling the broadcom chip)
+* Python 3.x
+* RPi.GPIO Python Module (raspbian package "python3-rpi.gpio")
 
 
 3. CONFIG
 
-# At minimum, a data source must be confgured in /root/dreadpi/dreadpi.cfg
+At minimum, a data source must be confgured in /root/dreadpi/dreadpi.cfg
 
 
 4. SCHEDULE
 
-# echo "*/5 * * * *     root    /root/dreadpi.py > dreadpi.lastrun 2>&1" > /etc/cron.d/dreadpi
+* echo "*/5 * * * *     root    /root/dreadpi.py > dreadpi.lastrun 2>&1" > /etc/cron.d/dreadpi
 
  
 5. LOGGING
@@ -56,7 +56,7 @@ Because controlling the RasPi GPIO pins requires root access, The following rest
 * Online APIs use hard coded URL prefixes.
 
 Because API keys are read/write, your config should not be world readable (and obviously not world writeable):
-	# sudo chmod 600 /root/dreadpi/dreadpi.cfg
+	* sudo chmod 600 /root/dreadpi/dreadpi.cfg
 
 
 7. WIRING
