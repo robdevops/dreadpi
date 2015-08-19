@@ -30,7 +30,7 @@ git clone https://github.com/solikeumyeah/dreadpi.git
 
 #### TEST
 ```
-./dreadpi/dreadpi.py
+sudo ./dreadpi/dreadpi.py
 ```
 
 #### CONFIG
