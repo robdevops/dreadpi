@@ -9,9 +9,9 @@ It achieves this by controlling a relay board connected to the RasPi GPIO pins.
 This can reduce your grid energy consumption by better aligning your peak load with your peak generation.
 
 Supported collectors:
-api.enphaseenergy.com
-pvoutput.org
-standalone script
+* api.enphaseenergy.com
+* pvoutput.org
+* standalone script
 
 
 SYSTEM REQUIREMENTS
@@ -55,19 +55,19 @@ WIRING
 (a) Remove the jumper closing JD-VCC with VCC.
 
 (b) RasPi to relay control pins (low voltage side):	
-PIN1 (3V3)		  -> VCC
-PIN2 (5V)  		  -> JD-VCC
-PIN6 (GND)		  -> GND
-PIN11 (GPIO17)	-> IN1
-PIN13 (GPIO27)  -> IN2
-PIN9 (GND)		  -> GND (redundant)
+* PIN1 (3V3)		  -> VCC
+* PIN2 (5V)  		  -> JD-VCC
+* PIN6 (GND)		  -> GND
+* PIN11 (GPIO17)	-> IN1
+* PIN13 (GPIO27)  -> IN2
+* PIN9 (GND)		  -> GND (redundant)
 
 (c) Relay switch pins:
-RLA1-COM		->	DRM-COM.
-RLA2-COM		->	RLA1-NC.
-RLA1-NO		  ->	DRM2.
-RLA2-NO		  ->	DRM3.
-RLA2-NC 		-> 	(none) rest position aka drm0.
+* RLA1-COM		->	DRM-COM.
+* RLA2-COM		->	RLA1-NC.
+* RLA1-NO		  ->	DRM2.
+* RLA2-NO		  ->	DRM3.
+* RLA2-NC 		-> 	(none) rest position aka drm0.
 
 
 CONTRIBUTE
