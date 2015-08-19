@@ -15,7 +15,7 @@ Supported collectors:
 
 #### REQUIREMENTS
 
-* RasPi hardware (You'll be error-bombed if dreadpi can't access the broadcom chip).
+* RasPi hardware (you'll be error-bombed if dreadpi can't access the broadcom chip).
 * Dual Double Throw Relay module ($3 online) and leads ($1 online).
 * Root access (for controlling the broadcom chip).
 * Python 3.x.
