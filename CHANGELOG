@@ -1,0 +1,33 @@
+# CHANGELOG
+
+0.098  Add licensing for upload to interwebs.
+0.097  Make logging path portable (albeit still unixy for now)
+0.096  Read config from scripts residing path rather than the users working directory.
+0.095  Invert Graph log. Now expressed as maximum percentage of power use.
+0.094  Validate timestamp format returned by collector.
+0.093  Cleanup layout to appease PEP8 and Pylint.
+0.092  Automatically duplicate error logging to stderr to avoid explicit print calls.
+0.091  Try to reset relay states on errors/stale data, where appropriate.
+0.090  Security: replace 'su' with native priv drop. All collectors now "nobodies" and shells aren't invited.
+0.081  Decrease startup time by nesting optional dependencies.
+0.080  Split code into several files.
+0.071  Handle HTTP exceptions.
+0.070  Rewrite in Python 3; no more 3rd party dependencies.
+0.061  Convert config and other TXT files to Windows compatible format (CR/LF).
+0.060  API throttle check (PVOutput). Data freshness checks (Enlighten and PVOutput).
+0.059  Security: Call external script through file pipe rather than system call (bypass first shell).
+0.058  Security: Validate config values.
+0.057  Security: Validate API content.
+0.056  Security: Hard code URL prefixes and running external_script as 'nobody'.
+0.055  Concurrency protection.
+0.054  Cleanup error states (stdout, stderr, messages, logging)
+0.053  Warn if external program collection method has non-zero exit state.
+0.052  Log all state changes to disk (for spreadsheet charts).
+0.051  For simplicity, pins are now modified in order, rather than explicitly passed to functions as arguments.
+0.050  Integrate PVOutput API.
+0.040  Integrate Enlighten API; first practical version.
+0.030  Now integrates with broadcom 2835 library and is changing GPIO states on the Pi. 
+0.020  Config moved to a file.
+0.010  Rewrite in Perl 5; first compilable version.
+0.002  Check variables for sane values.
+0.001  Initial prototype (pseduo code)
