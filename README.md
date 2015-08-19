@@ -5,6 +5,8 @@ Dreadpi enables automatic control of air conditioning DRM modes based on your cu
 It achieves this by controlling a relay board connected to the RasPi GPIO pins.
 This can reduce your grid energy consumption by better aligning your peak load with your peak generation.
 
+Note: DRED is an AU/NZ standard (AS/NZS 4755).
+
 Supported collectors:
 * api.enphaseenergy.com (Enlighten API)
 * pvoutput.org
