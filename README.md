@@ -21,6 +21,12 @@ Supported collectors:
 * Python 3.x
 * RPi.GPIO Python 3 module (raspbian package "python3-rpi.gpio")
 
+#### INSTALL
+
+Installs to ./dreadpi/:
+```
+git clone https://github.com/solikeumyeah/dreadpi.git
+```
 
 #### CONFIG
 
