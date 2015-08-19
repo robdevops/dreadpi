@@ -24,7 +24,7 @@ Supported collectors:
 
 #### CONFIG
 
-At minimum, a data source must be confgured. 
+At minimum, a data source must be confgured. You'll need to obtain API keys and replace XXX values for the API collectors to work.
 ```
 dreadpi.cfg
 ```
@@ -32,8 +32,9 @@ dreadpi.cfg
 
 #### SCHEDULE
 
+Creating an example cron which captures the last output to a file:
 ```
-echo "*/5 * * * *     root    /root/dreadpi.py > dreadpi.lastrun 2>&1" > /etc/cron.d/dreadpi
+echo "*/5 * * * *     root    /root/dreadpi/dreadpi.py > dreadpi.lastrun 2>&1" > /etc/cron.d/dreadpi
 ```
  
 #### LOGGING
