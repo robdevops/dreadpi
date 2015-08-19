@@ -94,6 +94,8 @@ Relay switch pins:
 
 Disclaimer: This info is provided for educational purposes. You should not mess around with high voltage. It's dangerous. Your safety is your own responsibility.
 
+See 'images' directory for annotated wiring photographs.
+
 
 #### CONTRIBUTE
 
