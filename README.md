@@ -19,7 +19,7 @@ Supported collectors:
 * 2x Double Throw Relay module ($3 online) and leads ($1 online).
 * Root access (for controlling the broadcom chip)
 * Python 3.x
-* RPi.GPIO Python Module (raspbian package "python3-rpi.gpio")
+* RPi.GPIO Python 3 module (raspbian package "python3-rpi.gpio")
 
 
 #### CONFIG
