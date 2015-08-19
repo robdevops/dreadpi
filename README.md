@@ -1,4 +1,4 @@
-d# dreadpi
+# dreadpi
 Demand Response Enabling Device (DRED) for Raspberry Pi.
 
 Dreadpi enables automatic control of air conditioning DRM modes based on your current renewable power generation.
