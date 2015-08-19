@@ -69,7 +69,7 @@ Because controlling the RasPi GPIO pins requires root access, The following rest
 
 Because API keys are read/write, and a potential privacy concern, your config should not be world readable (and obviously not world writeable):
 ````
-sudo chmod 600 dreadpi.cfg
+sudo chmod 600 dreadpi/dreadpi.cfg
 ````
 
 
