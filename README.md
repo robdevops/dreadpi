@@ -75,7 +75,10 @@ sudo chmod 600 dreadpi/dreadpi.cfg
 
 #### WIRING
 
-Remove the jumper closing JD-VCC with VCC.
+Disclaimer: This info is provided for educational purposes. You should not mess around with high voltage. It's dangerous. Your safety is your own responsibility.
+
+Jumper:
+* Remove the jumper closing JD-VCC with VCC.
 
 RasPi to relay control pins (low voltage side):	
 * PIN1 (3V3)		-> VCC
@@ -91,8 +94,6 @@ Relay switch pins:
 * RLA1-NO		->	DRM2.
 * RLA2-NO		->	DRM3.
 * RLA2-NC 		-> 	(none) rest position aka drm0.
-
-Disclaimer: This info is provided for educational purposes. You should not mess around with high voltage. It's dangerous. Your safety is your own responsibility.
 
 See 'images' directory for annotated wiring photographs.
 
