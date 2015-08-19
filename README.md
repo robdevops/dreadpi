@@ -108,12 +108,13 @@ elif DATA_SOURCE == "<your collector>":
     watts = <your collector>.<your function>()
 ```
 To be accepted upstream, also:
-* Copy/Paste the logging block from another collector (requires import logging and import os).
 * Pass your variables from dreadpi.cfg:
 ```
 elif DATA_SOURCE == "<your collector>":
     watts = <your collector>.<your function>(USER, KEY, SYSID)
 ```
+* Copy/Paste the logging block from another collector (requires import logging and import os).
+
 Ideally your collector would also:
 * Return a POSIX content timestamp:
 ```
