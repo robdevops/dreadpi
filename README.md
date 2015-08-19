@@ -89,14 +89,14 @@ Load it from energy.py like this:
 ```
 from lib import <your collector>
 ```
-And call it from energy.py like this:
+And call it like this:
 ```
 elif DATA_SOURCE == "<your collector>":
 	watts = <your collector>.<your function>()
 ```
 To be accepted upstream, also:
 * Copy/Paste the logging block from another collector (requires import logging and import os).
-* Have energy.py pass your variables from the existing config:
+* Pass your variables from dreadpi.cfg:
 ```
 watts = <your collector>.<your function>(USER, KEY, SYSID)
 ```
