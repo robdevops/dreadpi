@@ -25,7 +25,7 @@ Supported collectors:
 
 #### CONFIG
 
-At minimum, a data source must be confgured in /root/dreadpi/dreadpi.cfg
+At minimum, a data source must be confgured in dreadpi.cfg
 
 
 #### SCHEDULE
@@ -40,9 +40,9 @@ Critical errors:
 ````
 /var/log/dreadpi.errorlog.txt
 ````
-DRM states:
+DRM states (expressed as a % of max energy use: DRM0/2/3=100/50/75% for graphing)
 ````
-/var/log/dreadpi.plotlog.txt (expressed as a % of max energy use: DRM0/2/3=100/50/75%)
+/var/log/dreadpi.plotlog.txt 
 ````
 
 
