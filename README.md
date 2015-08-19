@@ -28,6 +28,11 @@ Installs to ./dreadpi/:
 git clone https://github.com/solikeumyeah/dreadpi.git
 ```
 
+#### TEST
+```
+./dreadpi/dreadpi.py
+```
+
 #### CONFIG
 
 At minimum, a data source must be confgured. You'll need to obtain API keys and replace XXX values for the API collectors to work, but you can test with the default 'external_script' setting.
