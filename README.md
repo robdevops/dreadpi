@@ -1,17 +1,8 @@
 # dreadpi
 Demand Response Enabling Device (DRED) for Raspberry Pi.
 
-#### 1. INTRO
-#### 2. SYSTEM REQUIREMENTS
-#### 3. CONFIG
-#### 4. SCHEDULE
-#### 5. LOGGING
-#### 6. SECURITY
-#### 7. WIRING
-#### 8. CONTRIBUTE
 
-
-1. INTRO
+INTRO
 
 Dreadpi enables automatic control of air conditioning DRM modes based on your current renewable power generation.
 It achieves this by controlling a relay board connected to the RasPi GPIO pins.
@@ -23,7 +14,7 @@ pvoutput.org
 standalone script
 
 
-2. SYSTEM REQUIREMENTS
+SYSTEM REQUIREMENTS
 
 * RasPi hardware (dreadpi will throw errors if it can't access the broadcom chip)
 * 2x Double Throw Relay module ($3 online) and leads ($1 online).
@@ -32,23 +23,23 @@ standalone script
 * RPi.GPIO Python Module (raspbian package "python3-rpi.gpio")
 
 
-3. CONFIG
+CONFIG
 
 At minimum, a data source must be confgured in /root/dreadpi/dreadpi.cfg
 
 
-4. SCHEDULE
+SCHEDULE
 
 * echo "*/5 * * * *     root    /root/dreadpi.py > dreadpi.lastrun 2>&1" > /etc/cron.d/dreadpi
 
  
-5. LOGGING
+LOGGING
 
 Critical errors:	/var/log/dreadpi.errorlog.txt
 DRM states:	/var/log/dreadpi.plotlog.txt (expressed as a % of max energy use: DRM0/2/3=100/50/75%)
 
 
-6. SECURITY
+SECURITY
 
 Because controlling the RasPi GPIO pins requires root access, The following restrictions have been implemented:
 * Dreadpi runs all its collectors as the 'nobody' user.
@@ -59,7 +50,7 @@ Because API keys are read/write, your config should not be world readable (and o
 	* sudo chmod 600 /root/dreadpi/dreadpi.cfg
 
 
-7. WIRING
+WIRING
 
 (a) Remove the jumper closing JD-VCC with VCC.
 
@@ -79,7 +70,7 @@ RLA2-NO		  ->	DRM3.
 RLA2-NC 		-> 	(none) rest position aka drm0.
 
 
-8. CONTRIBUTE
+CONTRIBUTE
 
 Collectors:
 You can easily add new collectors. Just drop a .py in the lib directory and have it return a value in watts.
