@@ -5,25 +5,25 @@ Dreadpi enables automatic control of air conditioning DRM modes based on your cu
 It achieves this by controlling a relay board connected to the RasPi GPIO pins.
 This can reduce your grid energy consumption by better aligning your peak load with your peak generation.
 
-Note: DRED is an AU/NZ standard (AS/NZS 4755).
+DRED is an AU/NZ standard (AS/NZS 4755).
 
 Supported collectors:
-* api.enphaseenergy.com (Enlighten API)
+* api.enphaseenergy.com
 * pvoutput.org
 * standalone script
 
 
 #### REQUIREMENTS
 
-* RasPi hardware (You'll be error-bombed if dreadpi can't access the broadcom chip)
-* 2x Double Throw Relay module ($3 online) and leads ($1 online).
-* Root access (for controlling the broadcom chip)
-* Python 3.x
-* RPi.GPIO Python 3 module (raspbian package "python3-rpi.gpio")
+* RasPi hardware (You'll be error-bombed if dreadpi can't access the broadcom chip).
+* Dual Double Throw Relay module ($3 online) and leads ($1 online).
+* Root access (for controlling the broadcom chip).
+* Python 3.x.
+* RPi.GPIO Python 3 module (raspbian package "python3-rpi.gpio").
 
 #### INSTALL
 
-Installs to ./dreadpi/:
+Install to ./dreadpi/:
 ```
 git clone https://github.com/solikeumyeah/dreadpi.git
 ```
@@ -67,7 +67,7 @@ Because controlling the RasPi GPIO pins requires root access, The following rest
 * The external_script filename can not contain most special shell characters.
 * Online APIs use hard coded URL prefixes.
 
-Because API keys are read/write, and the data itself is a potential privacy concern, your config should not be world readable (and obviously not world writeable):
+Because API keys are read/write, and the API data itself is a potential privacy concern, your config should not be world readable (and obviously not world writeable):
 ````
 sudo chmod 600 dreadpi/dreadpi.cfg
 ````
@@ -75,10 +75,10 @@ sudo chmod 600 dreadpi/dreadpi.cfg
 
 #### WIRING
 
-Disclaimer: This info is provided for educational purposes. You should not mess around with high voltage. It's dangerous. Your safety is your own responsibility.
+Disclaimer: This info is provided for educational purposes. Don't mess around with high voltage; it's dangerous. Your safety is your own responsibility.
 
 Jumper:
-* Remove the jumper closing JD-VCC with VCC.
+* Remove the relay module jumper closing JD-VCC and VCC.
 
 RasPi to relay control pins (low voltage side):	
 * PIN1 (3V3)		-> VCC
@@ -88,12 +88,12 @@ RasPi to relay control pins (low voltage side):
 * PIN13 (GPIO27)	-> IN2
 * PIN9 (GND)		-> GND (redundant)
 
-Relay switch pins:
-* RLA1-COM		->	DRM-COM.
-* RLA2-COM		->	RLA1-NC.
-* RLA1-NO		->	DRM2.
-* RLA2-NO		->	DRM3.
-* RLA2-NC 		-> 	(none) rest position aka drm0.
+Relay switch pins (high voltage side):
+* RLA1-COM		->	DRM-COM
+* RLA2-COM		->	RLA1-NC
+* RLA1-NO		->	DRM2
+* RLA2-NO		->	DRM3
+* RLA2-NC 		-> 	(none) rest position informally known as drm0
 
 See 'images' directory for annotated wiring photographs.
 
