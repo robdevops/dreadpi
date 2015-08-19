@@ -8,7 +8,7 @@ This can reduce your grid energy consumption by better aligning your peak load w
 DRED is an AU/NZ standard (AS/NZS 4755).
 
 Supported collectors:
-* api.enphaseenergy.com
+* api.enphaseenergy.com (enlighten)
 * pvoutput.org
 * standalone script
 
