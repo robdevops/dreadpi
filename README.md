@@ -62,7 +62,7 @@ DRM states (for graphing purposes, states are expressed as a % of max energy use
 
 #### SECURITY
 
-Because controlling the RasPi GPIO pins requires root access, The following restrictions have been implemented:
+Because controlling the RasPi GPIO pins requires root access, the following restrictions have been implemented:
 * Dreadpi runs all its collectors as the 'nobody' user.
 * The external_script filename can not contain most special shell characters.
 * Online APIs use hard coded URL prefixes.
