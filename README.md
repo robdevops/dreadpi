@@ -45,7 +45,7 @@ dreadpi.cfg
 
 Creating an example cron which captures the last output to a file:
 ```
-echo "*/5 * * * *     root    /root/dreadpi/dreadpi.py > /var/log/dreadpi.lastrun 2>&1" > /etc/cron.d/dreadpi
+echo "*/5 * * * *     root    /root/dreadpi/dreadpi.py > /var/log/dreadpi.cron.lastrun 2>&1" > /etc/cron.d/dreadpi
 ```
  
 #### LOGGING
