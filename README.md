@@ -56,7 +56,7 @@ Because controlling the RasPi GPIO pins requires root access, The following rest
 * The external_script filename can not contain most special shell characters.
 * Online APIs use hard coded URL prefixes.
 
-Because API keys are read/write, your config should not be world readable (and obviously not world writeable):
+Because API keys are read/write, and a potential privacy concern, your config should not be world readable (and obviously not world writeable):
 ````
 sudo chmod 600 dreadpi.cfg
 ````
