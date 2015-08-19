@@ -94,7 +94,7 @@ elif DATA_SOURCE == "<your collector>":
 	watts = <your collector>.<your function>()
 ```
 To be accepted upstream, also:
-* Copy/Paste the logging block from another collector.
+* Copy/Paste the logging block from another collector (requires import logging and import os).
 * Have energy.py pass your variables from the existing config:
 ```
 watts = <your collector>.<your function>(USER, KEY, SYSID)
