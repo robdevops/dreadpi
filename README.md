@@ -8,7 +8,7 @@ This can reduce your grid energy consumption by better aligning your peak load w
 DRED is an AU/NZ standard (AS/NZS 4755).
 
 Supported collectors:
-* api.enphaseenergy.com
+* api.enphaseenergy.com (enlighten)
 * pvoutput.org
 * standalone script
 
@@ -45,7 +45,7 @@ dreadpi.cfg
 
 Creating an example cron which captures the last output to a file:
 ```
-echo "*/5 * * * *     root    /root/dreadpi/dreadpi.py > /var/log/dreadpi.lastrun 2>&1" > /etc/cron.d/dreadpi
+echo "*/15 5-21 * * *     root    /root/dreadpi/dreadpi.py > /var/log/dreadpi.cron.lastrun 2>&1" > /etc/cron.d/dreadpi
 ```
  
 #### LOGGING
