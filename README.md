@@ -92,7 +92,7 @@ Relay switch pins:
 * RLA2-NO		->	DRM3.
 * RLA2-NC 		-> 	(none) rest position aka drm0.
 
-Disclaimer: This info is provided for educational purposes. I don't condone acting upon it. You should not mess around with high voltage. Your safety is your own responsibility.
+Disclaimer: This info is provided for educational purposes. You should not mess around with high voltage. It's dangerous. Your safety is your own responsibility.
 
 
 #### CONTRIBUTE
