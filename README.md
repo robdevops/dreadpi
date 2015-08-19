@@ -28,6 +28,11 @@ Installs to ./dreadpi/:
 git clone https://github.com/solikeumyeah/dreadpi.git
 ```
 
+#### TEST
+```
+sudo ./dreadpi/dreadpi.py
+```
+
 #### CONFIG
 
 At minimum, a data source must be confgured. You'll need to obtain API keys and replace XXX values for the API collectors to work, but you can test with the default 'external_script' setting.
@@ -64,7 +69,7 @@ Because controlling the RasPi GPIO pins requires root access, The following rest
 
 Because API keys are read/write, and a potential privacy concern, your config should not be world readable (and obviously not world writeable):
 ````
-sudo chmod 600 dreadpi.cfg
+sudo chmod 600 dreadpi/dreadpi.cfg
 ````
 
 
@@ -87,7 +92,7 @@ Relay switch pins:
 * RLA2-NO		->	DRM3.
 * RLA2-NC 		-> 	(none) rest position aka drm0.
 
-Disclaimer: This info is provided for educational purposes. I don't condone acting upon it. You should not mess around with high voltage. Your safety is your own responsibility.
+Disclaimer: This info is provided for educational purposes. You should not mess around with high voltage. It's dangerous. Your safety is your own responsibility.
 
 
 #### CONTRIBUTE
@@ -100,18 +105,21 @@ from lib import <your collector>
 And call it like this:
 ```
 elif DATA_SOURCE == "<your collector>":
-	watts = <your collector>.<your function>()
+    watts = <your collector>.<your function>()
 ```
 To be accepted upstream, also:
+* Pass your user configuration from dreadpi.cfg:
+```
+elif DATA_SOURCE == "<your collector>":
+    watts = <your collector>.<your function>(USER, KEY, SYSID)
+```
 * Copy/Paste the logging block from another collector (requires import logging and import os).
-* Pass your variables from dreadpi.cfg:
-```
-watts = <your collector>.<your function>(USER, KEY, SYSID)
-```
+
 Ideally your collector would also:
 * Return a POSIX content timestamp:
 ```
-watts, content_timestamp = <your collector>.<your function>(USER, KEY, SYSID)
+elif DATA_SOURCE == "<your collector>":
+    watts, content_timestamp = <your collector>.<your function>(USER, KEY, SYSID)
 ```
 * Perform exception handling and health warnings as per existing examples.
 * Have well commented code.
