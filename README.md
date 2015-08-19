@@ -105,18 +105,20 @@ from lib import <your collector>
 And call it like this:
 ```
 elif DATA_SOURCE == "<your collector>":
-	watts = <your collector>.<your function>()
+    watts = <your collector>.<your function>()
 ```
 To be accepted upstream, also:
 * Copy/Paste the logging block from another collector (requires import logging and import os).
 * Pass your variables from dreadpi.cfg:
 ```
-watts = <your collector>.<your function>(USER, KEY, SYSID)
+elif DATA_SOURCE == "<your collector>":
+    watts = <your collector>.<your function>(USER, KEY, SYSID)
 ```
 Ideally your collector would also:
 * Return a POSIX content timestamp:
 ```
-watts, content_timestamp = <your collector>.<your function>(USER, KEY, SYSID)
+elif DATA_SOURCE == "<your collector>":
+    watts, content_timestamp = <your collector>.<your function>(USER, KEY, SYSID)
 ```
 * Perform exception handling and health warnings as per existing examples.
 * Have well commented code.
