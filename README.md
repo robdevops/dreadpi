@@ -82,7 +82,7 @@ Jumper:
 
 RasPi to relay (control pins):	
 * PIN1 (3V3)		-> VCC
-* PIN2 (5V)  		C
+* PIN2 (5V)  	-> JD-VCC
 * PIN6 (GND)		-> GND
 * PIN11 (GPIO17)	-> IN1
 * PIN13 (GPIO27)	-> IN2
