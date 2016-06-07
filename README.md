@@ -100,7 +100,10 @@ See 'images' directory for annotated wiring photographs.
 
 #### CONTRIBUTE
 
-You can easily add new collectors. Just drop a .py in the lib directory and have it return a value in watts.
+You can easily add new collectors. Incidentally, the PVOutput documentation provides many third party code examples for accessing various smart invertors:
+http://pvoutput.org/help.html#integration-contributed-software
+
+To integrate with dredPi, just drop a .py in the lib directory and have it return a value in watts.
 Load it from energy.py like this:
 ```
 from lib import <your collector>
