@@ -79,7 +79,7 @@ sudo chmod 600 dreadpi/dreadpi.cfg
 
 # Wiring
 
-Disclaimer: This info is provided for educational purposes. Don't mess around with mains voltage appliances; they're dangerous. Your safety is your own responsibility.
+Disclaimer: This info is provided for educational purposes. Don't mess around with mains voltage appliances; they're dangerous. Your safety is your own responsibility. Take proper precautions.
 
 ## Jumper:
 * Remove the relay module jumper closing JD-VCC and VCC.
