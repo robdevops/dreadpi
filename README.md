@@ -13,7 +13,7 @@ Supported collectors:
 * standalone script
 
 
-#### REQUIREMENTS
+# Requirements
 
 * RasPi hardware (you'll be error-bombed if dreadpi can't access the broadcom chip).
 * Dual Double Throw Relay module ($3 online) and leads ($1 online).
@@ -21,19 +21,19 @@ Supported collectors:
 * Python 3.x.
 * RPi.GPIO Python 3 module (raspbian package "python3-rpi.gpio").
 
-#### INSTALL
+# Install
 
 Install to ./dreadpi/:
 ```
 git clone https://github.com/robdevops/dreadpi.git
 ```
 
-#### TEST
+# Test
 ```
 sudo ./dreadpi/dreadpi.py
 ```
 
-#### CONFIG
+# Config
 
 At minimum, a data source must be confgured. You'll need to obtain API keys and replace XXX values for the API collectors to work, but you can test with the default 'external_script' setting.
 ```
@@ -41,14 +41,15 @@ dreadpi.cfg
 ```
 
 
-#### SCHEDULE
+## Schedule
 
 Creating an example cron which captures the last output to a file:
 ```
+# Note: Running this too often will shorten the relay life
 echo "*/15 5-21 * * *     root    /root/dreadpi/dreadpi.py > /var/log/dreadpi.cron.lastrun 2>&1" > /etc/cron.d/dreadpi
 ```
- 
-#### LOGGING
+
+## Logging
 
 Critical errors:
 ````
@@ -56,11 +57,11 @@ Critical errors:
 ````
 DRM states (for graphing purposes, states are expressed as a % of max energy use):
 ````
-/var/log/dreadpi.plotlog.txt 
+/var/log/dreadpi.plotlog.txt
 ````
 
 
-#### SECURITY
+# Security
 
 Because controlling the RasPi GPIO pins requires root access, the following restrictions have been implemented:
 * Dreadpi runs all its collectors as the 'nobody' user.
@@ -73,32 +74,32 @@ sudo chmod 600 dreadpi/dreadpi.cfg
 ````
 
 
-#### WIRING
+# Wiring
 
 Disclaimer: This info is provided for educational purposes. Don't mess around with mains voltage appliances; they're dangerous. Your safety is your own responsibility.
 
-Jumper:
+## Jumper:
 * Remove the relay module jumper closing JD-VCC and VCC.
 
-RasPi to relay (control pins):	
+## RasPi to relay (control pins):
 * PIN1 (3V3)		-> VCC
-* PIN2 (5V)  	-> JD-VCC
+* PIN2 (5V)		-> JD-VCC
 * PIN6 (GND)		-> GND
 * PIN11 (GPIO17)	-> IN1
 * PIN13 (GPIO27)	-> IN2
 * PIN9 (GND)		-> GND (redundant)
+![control_pins](images/control.pins.annotated.jpg)
 
-Relay to DRM (switch pins):
+## Relay to DRM (switch pins):
 * RLA1-COM		->	DRM-COM
 * RLA2-COM		->	RLA1-NC
 * RLA1-NO		->	DRM2
 * RLA2-NO		->	DRM3
-* RLA2-NC 		-> 	(none) rest position, informally "drm0".
+* RLA2-NC		->	(none) rest position, informally "drm0".
+![control_pins](images/switch.pins.annotated.jpg)
 
-See 'images' directory for annotated wiring photographs.
 
-
-#### CONTRIBUTE
+# Contribute
 
 You can easily add new collectors. Incidentally, the PVOutput documentation provides many third party code examples for accessing various smart invertors:
 http://pvoutput.org/help.html#integration-contributed-software
@@ -131,4 +132,8 @@ elif DATA_SOURCE == "<your collector>":
 * Have well commented code.
 
 Note: collectors must be able to run as 'nobody'.
+
+This was my first ever attempt at Python. I welcome suggestions on how to do anything more elegantly, no matter how trivial. Just log an issue or DM me. Thanks!
+
+![overview](images/overview.jpg)
 
