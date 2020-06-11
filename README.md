@@ -25,7 +25,7 @@ Supported collectors:
 
 Install to ./dreadpi/:
 ```
-git clone https://github.com/solikeumyeah/dreadpi.git
+git clone https://github.com/robdevops/dreadpi.git
 ```
 
 #### TEST
