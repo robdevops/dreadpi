@@ -12,6 +12,9 @@ Supported collectors:
 * pvoutput.org
 * standalone script
 
+![overview](images/overview.jpg)
+
+
 
 # Requirements
 
@@ -133,7 +136,5 @@ elif DATA_SOURCE == "<your collector>":
 
 Note: collectors must be able to run as 'nobody'.
 
-This was my first ever attempt at Python. I welcome suggestions on how to do anything more elegantly, no matter how trivial. Just log an issue or DM me. Thanks!
-
-![overview](images/overview.jpg)
+This was my first ever attempt at Python. I welcome suggestions on how to do anything more elegantly, no matter how trivial. Just log an issue or DM me. Thanks and happy hacking!
 
